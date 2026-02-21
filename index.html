@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         /* font */
         @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
@@ -15,9 +17,28 @@
     </style>
 </head>
 
-<body class="geist">
+<body class="geist max-w-[1110px] mx-auto my-10 lg:my-[60px]">
     <header>
-
+        <h3
+            class="text-[#002C5C] font-bold text-2xl mb-3 text-center md:text-start lg:text-start md:mb-4 lg:mb-5 md:text-[32px] lg:text-[32px]">
+            Job
+            Application
+            Tracker</h3>
+        <div class="grid grid-cols-3 gap-2 md:gap-4 lg:gap-4">
+            <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
+                <h4 class="font-medium text-sm text-[#323B49] mb-2">Total</h4>
+                <h2 class="font-bold text-2xl text-[#002C5C]">8</h2>
+            </div>
+            <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
+                <h4 class="font-medium text-sm text-[#323B49] mb-2">Interview</h4>
+                <h2 class="font-bold text-2xl text-[#10B981]">0</h2>
+            </div>
+            <div class="border-[#f1f2f4] rounded-lg shadow-lg p-5">
+                <h4 class="font-medium text-sm text-[#323B49] mb-2">Rejected</h4>
+                <h2 class="font-bold text-2xl text-[#EF4444]">0</h2>
+            </div>
+        </div>
+        <hr class="text-[#e6e7e9] my-7">
     </header>
 
     <main>
