@@ -5,5 +5,11 @@ document.getElementById('all-section').addEventListener('click', function () {
     this.className = 'btn bg-[#3B82F6] font-medium text-white px-3 py-2 rounded';
     allCards.classList.remove('hidden');
 
+    const cards = document.querySelectorAll('#cards .card');
+    cards.forEach(card => {
+        card.classList.remove('hidden');
+    })
+
+
     document.getElementById('no-jobs').classList.add('hidden');
 })
