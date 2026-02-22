@@ -18,7 +18,7 @@
     </style>
 </head>
 
-<body class="geist max-w-[1110px] mx-auto my-10 lg:my-[60px]">
+<body class="geist max-w-[1110px] mx-auto my-10 bg-[#F8FAFC] lg:my-[60px]">
     <header>
         <h3
             class="text-[#002C5C] font-bold text-2xl mb-3 text-center md:text-start lg:text-start md:mb-4 lg:mb-5 md:text-[32px] lg:text-[32px]">
@@ -49,8 +49,8 @@
                 <p class="font-medium text-[#64748B]">8 jobs</p>
             </div>
             <div class="flex gap-2 items-center mb-4">
-                <button class="btn bg-[#3B82F6] text-white px-8 py-[10px] rounded">All</button>
-                <button
+                <button class="btn bg-[#3B82F6] font-medium text-white px-8 py-[10px] rounded">All</button>
+                <button id="interview-section"
                     class="btn border-[#f1f2f4] font-medium text-[#64748B] shadow-sm px-3 py-2 rounded">Interview</button>
                 <button
                     class="btn border-[#f1f2f4] font-medium text-[#64748B] shadow-sm px-3 py-2 rounded">Rejected</button>
@@ -59,7 +59,7 @@
 
         <!-- card section -->
         <section>
-            <div class="space-y-6">
+            <div id="cards" class="space-y-6">
 
                 <!-- card 1 -->
                 <div class="card bg-base-100 shadow-sm">
@@ -311,6 +311,8 @@
             </div>
         </section>
     </main>
+
+    <script src="js/interview.js"></script>
 </body>
 
 </html>
