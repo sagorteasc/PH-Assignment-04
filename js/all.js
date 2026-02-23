@@ -10,6 +10,6 @@ document.getElementById('all-section').addEventListener('click', function () {
         card.classList.remove('hidden');
     })
 
-
     document.getElementById('no-jobs').classList.add('hidden');
+    sectionJobs('all');
 })

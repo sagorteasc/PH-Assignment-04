@@ -1,58 +1,64 @@
-const totalJob = 8;
-
 // interview button
 function interviewButton(button) {
     // alert('hello');
     const interviewCard = button.parentNode.parentNode.parentNode;
     const interviewBadge = interviewCard.querySelector('.notApplied');
-    const interviewUpdatedBadge = interviewBadge.innerText.trim();
+    const newInterviewStatus = interviewBadge.innerText.trim();
 
     let interviewCounter = document.getElementById('interviewCounter');
     let rejectCounter = document.getElementById('rejectCounter');
-    let interviewCount = parseInt(interviewCounter.innerText, 0);
-    let rejectCount = parseInt(rejectCounter.innerText, 0);
+    let interviewCount = parseInt(interviewCounter.innerText);
+    let rejectCount = parseInt(rejectCounter.innerText);
 
     // total value validation
+    const totalJob = document.querySelectorAll('#cards .card').length;
     if (interviewCount + rejectCount >= totalJob) {
         return;
     }
 
     // interview tab reject button functionality
-    if (interviewUpdatedBadge === 'Interview') {
+    if (newInterviewStatus === 'Interview') {
         return;
     }
-    else if (interviewUpdatedBadge === 'Rejected') {
+    else if (newInterviewStatus === 'Rejected') {
         rejectCount--;
         rejectCounter.innerHTML = rejectCount;
     }
     interviewCount++;
     interviewCounter.innerHTML = interviewCount;
+    interviewBadge.innerText = 'Interview';
+    interviewBadge.className = 'notApplied font-semibold text-sm text-[#10B981] border-[#10B981] border-1 w-fit mb-2 px-3 py-2 rounded';
+    statusChangebadge();
 }
 
 // reject button
 function rejectButton(button) {
     const rejectCard = button.parentNode.parentNode.parentNode;
     const rejectBadge = rejectCard.querySelector('.notApplied');
-    const rejectUpdatedBadge = rejectBadge.innerText.trim();
+    const newRejectStatus = rejectBadge.innerText.trim();
 
     let rejectCounter = document.getElementById('rejectCounter');
     let interviewCounter = document.getElementById('interviewCounter');
-    let rejectCount = parseInt(rejectCounter.innerText, 0);
-    let interviewCount = parseInt(interviewCounter.innerText, 0);
+    let rejectCount = parseInt(rejectCounter.innerText);
+    let interviewCount = parseInt(interviewCounter.innerText);
 
     // total value validation
+    const totalJob = document.querySelectorAll('#cards .card').length;
     if (interviewCount + rejectCount >= totalJob) {
         return;
     }
 
     // reject tab interview button functionality
-    if (rejectUpdatedBadge === 'Rejected') {
+    if (newRejectStatus === 'Rejected') {
         return;
     }
-    else if (rejectUpdatedBadge === 'Interview') {
+    else if (newRejectStatus === 'Interview') {
         interviewCount--;
         interviewCounter.innerHTML = interviewCount;
     }
     rejectCount++;
     rejectCounter.innerHTML = rejectCount;
+    rejectBadge.innerText = 'Rejected';
+    rejectBadge.className = 'notApplied font-semibold text-sm text-[#10B981] border-[#10B981] border-1 w-fit mb-2 px-3 py-2 rounded'
+    statusChangebadge();
 }

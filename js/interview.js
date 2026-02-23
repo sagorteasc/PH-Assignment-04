@@ -1,11 +1,11 @@
-// section button
+// section interview button
 const interviewSectionCards = document.getElementById('cards');
 document.getElementById('interview-section').addEventListener('click', function () {
 
     document.getElementById('all-section').classList.remove('bg-[#3B82F6]', 'text-white');
     document.getElementById('rejected-section').classList.remove('bg-[#3B82F6]', 'text-white');
     this.className = 'btn bg-[#3B82F6] font-medium text-white px-3 py-2 rounded';
-    // interviewSectionCards.classList.add('hidden');
+
     const cards = document.querySelectorAll('#cards .card')
     let found = false;
     cards.forEach(card => {
@@ -17,16 +17,6 @@ document.getElementById('interview-section').addEventListener('click', function 
         else {
             card.classList.add('hidden');
         }
-        // if (foundText === 'Rejected') {
-        //     let rejectCounter = document.getElementById('rejectCounter');
-        //     let rejectCount = parseInt(rejectCounter.innerText, 0);
-        //     // let interviewCounter = document.getElementById('interviewCounter');
-        //     // let interviewCount = parseInt(interviewCounter.innerText, 0);
-        //     // interviewCount--;
-        //     rejectCount++;
-        //     // interviewCounter.innerHTML = interviewCount;
-        //     rejectCounter.innerHTML = rejectCount;
-        // }
     })
     if (!found) {
         document.getElementById('no-jobs').classList.remove('hidden');
@@ -34,6 +24,7 @@ document.getElementById('interview-section').addEventListener('click', function 
     else {
         document.getElementById('no-jobs').classList.add('hidden');
     }
+    sectionJobs('interview');
 })
 
 // card button1
