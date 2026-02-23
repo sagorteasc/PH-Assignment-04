@@ -34,7 +34,7 @@ document.getElementById('rejected-section').addEventListener('click', function (
         document.getElementById('no-jobs').classList.add('hidden');
     }
 
-    document.getElementById('no-jobs').classList.remove('hidden');
+    // document.getElementById('no-jobs').classList.remove('hidden');
 })
 
 // card button1

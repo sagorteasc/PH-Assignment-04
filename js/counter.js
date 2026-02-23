@@ -3,7 +3,7 @@ const totalJob = 8;
 // interview button
 function interviewButton(button) {
     // alert('hello');
-    const interviewCard = button.closest('.card');
+    const interviewCard = button.parentNode.parentNode.parentNode;
     const interviewBadge = interviewCard.querySelector('.notApplied');
     const interviewUpdatedBadge = interviewBadge.innerText.trim();
 
@@ -31,7 +31,7 @@ function interviewButton(button) {
 
 // reject button
 function rejectButton(button) {
-    const rejectCard = button.closest('.card');
+    const rejectCard = button.parentNode.parentNode.parentNode;
     const rejectBadge = rejectCard.querySelector('.notApplied');
     const rejectUpdatedBadge = rejectBadge.innerText.trim();
 
