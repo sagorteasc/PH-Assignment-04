@@ -31,4 +31,10 @@ function jobCounter() {
     // console.log(typeof job)
     job--;
     jobcount.innerHTML = job;
+
+    const sectionTotalCount = document.getElementById('sectionTotalJobs');
+    let sectionTotal = parseInt(sectionTotalCount.innerText);
+    sectionTotal--;
+    sectionTotalCount.innerHTML = sectionTotal;
+
 }
